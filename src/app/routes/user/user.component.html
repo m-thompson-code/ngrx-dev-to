@@ -1,0 +1,14 @@
+<div>
+    User Component
+</div>
+
+<ng-container *ngIf="user$ | async as user">
+    <div>
+        User loading: {{ user.loading | json }}
+    </div>
+    
+    <div>
+        <p>{{ user.value | json }}</p>
+    </div>
+    
+</ng-container>

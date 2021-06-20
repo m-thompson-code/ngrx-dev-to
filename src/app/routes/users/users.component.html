@@ -1,0 +1,16 @@
+<div>
+    Users Component
+</div>
+
+<ng-container *ngIf="users$ | async as users">
+    <div>
+        Loading users: {{ users.loading |json }}
+    </div>
+
+    <div *ngFor="let user of users.value">
+        <p>{{ user | json }}</p>
+        <p><a [routerLink]="['/user', user.id]">Navigate to user {{ user.id }}</a></p>
+    </div>
+</ng-container>
+
+
