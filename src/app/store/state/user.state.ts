@@ -1,5 +1,6 @@
 import { IUser, Nullable } from "@models/user.model";
 
+// Consideration: It might make sense to split users and selectedUser into different states?
 export interface IUserState {
     users: {
         value: Nullable<IUser[]>;
